@@ -7,6 +7,7 @@ public abstract class Obra {
 	private String titulo;
 	private Artista autor;
 	private int añoEdicion;
+	Artista artista = new Artista();
 	
 	public Obra(String titulo, Artista autor, int añoEdicion) {
 	
@@ -16,15 +17,14 @@ public abstract class Obra {
 	}
 
 	public Obra(Scanner sc) {
-		Artista artista = new Artista();
 		System.out.println("Título de la obra:");
 		this.setTitulo(sc.next());
 		System.out.println("Nombre del autor:");
 		artista.setNombre(sc.next());
 		System.out.println("Año de nacimiento del autor:");
-		artista.setAñoNacimiento(sc.next());
+		artista.setAñoNacimiento(sc.nextInt());
 		System.out.println("Año de edición de la obra:");
-		this.setAñoEdicion(sc.next());
+		this.setAñoEdicion(sc.nextInt());
 	}
 	
 	public Artista getAutor() {
@@ -60,8 +60,10 @@ public abstract class Obra {
 		
 	}*/
 	public void mostrarObra(){
+		//Artista artista = new Artista();
 		System.out.println("\tTítulo: " + this.getTitulo());
-		System.out.println("\tAutor: " + this.getAutor());
+		System.out.println("\tNombre del autor: " + artista.getNombre());
+		System.out.println("\tAño de nacimiento del artista: " + artista.getAñoNacimiento());
 		System.out.println("\tAño de edición: " + this.getAñoEdicion());
 	}
 }

@@ -4,7 +4,10 @@ public class Artista {
 
 	private String nombre;
 	private int añoNacimiento;
-
+	
+	public Artista(){
+		
+	}
 	public Artista(String nombre, int añoNacimiento) {
 	
 		this.nombre = nombre;

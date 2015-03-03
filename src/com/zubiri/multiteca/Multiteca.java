@@ -25,8 +25,8 @@ public final class Multiteca {
 		for (int i = 0; i < cant; i++) {
 			
 			System.out.println("¿Qué obra quieres insertar?");
-			System.out.println("Disco:--------1");
-			System.out.println("Libro:----------2");
+			System.out.println("Disco:-----------1");
+			System.out.println("Libro:-----------2");
 			System.out.println("Pelicula:--------3");
 		    
 			switch(sc.nextInt()) {
@@ -48,6 +48,16 @@ public final class Multiteca {
 			}			
 		}
 		
+	}
+	public void mostrarMultiteca() {
+		
+		if (multiteca.size() == 0) {
+			System.out.println("No se han cargado los obras");
+		}
+		for (int i = 0;i < multiteca.size();i++) {
+			Obra obra = multiteca.get(i);
+			obra.mostrarObra(); //dispatching din�mico a partir de polimorfismo
+		}
 	}
 
 	/*public Multiteca(ArrayList<Obra> obras) {
