@@ -22,6 +22,8 @@ public class Libro extends Obra{
 		this.setEditorial(sc.next());
 		System.out.println("Número de páginas del libro: ");
 		this.setNumPaginas(sc.nextInt());
+	}
+	public void escriLibro(){
 		try {
 		FileWriter fw = new FileWriter("/home/zubiri/AriketakJava/java_multimedia/src/com/zubiri/multiteca/obras.txt", true);
         fw.write("2," 

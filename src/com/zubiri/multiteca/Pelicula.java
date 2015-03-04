@@ -20,6 +20,8 @@ public class Pelicula extends Obra{
 		//Añade el resto de datos
 		System.out.println("Productora: ");
 		this.setProductora(sc.next());
+	}
+	public void escriPeli(){
 		try {
 		FileWriter fw = new FileWriter("/home/zubiri/AriketakJava/java_multimedia/src/com/zubiri/multiteca/obras.txt", true);
         fw.write("3," 

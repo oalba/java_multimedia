@@ -23,6 +23,8 @@ public class Disco extends Obra{
 		this.setDiscografia(sc.next());
 		System.out.println("Número de canciones del disco: ");
 		this.setnCanciones(sc.nextInt());
+	}
+	public void escriDisco(){
 		try {
 		//Artista artista = new Artista();
 		FileWriter fw = new FileWriter("/home/zubiri/AriketakJava/java_multimedia/src/com/zubiri/multiteca/obras.txt", true);
@@ -37,7 +39,7 @@ public class Disco extends Obra{
 		}catch(IOException e){
             System.out.println("Error E/S: "+e);
         }
-	}
+	}	
 	
 	public String getDiscografia() {
 		
