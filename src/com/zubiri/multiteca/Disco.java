@@ -9,7 +9,7 @@ public class Disco extends Obra{
 	private int nCanciones;
 
 	//Obra obra = new Obra();
-	Artista artista = new Artista();
+	//Artista artista = new Artista();
 	
 	public Disco(String titulo, Artista autor, int añoEdicion, String discografia, int nCanciones) {
 		super(titulo, autor, añoEdicion);
@@ -28,8 +28,8 @@ public class Disco extends Obra{
 		FileWriter fw = new FileWriter("/home/zubiri/AriketakJava/java_multimedia/src/com/zubiri/multiteca/obras.txt", true);
         fw.write("1," 
         	+ getTitulo() + "," 
-        	+ artista.getNombre() + "," 
-        	+ artista.getAñoNacimiento() + "," 
+        	+ Artista.getNombre() + "," 
+        	+ Artista.getAñoNacimiento() + "," 
         	+ getAñoEdicion() + "," 
         	+ this.getDiscografia() + "," 
         	+ this.getnCanciones() + "\n");

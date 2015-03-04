@@ -2,36 +2,36 @@ package com.zubiri.multiteca;
 
 public class Artista {
 
-	private String nombre;
-	private int añoNacimiento;
+	private static String nombre;
+	private static int añoNacimiento;
 	
 	public Artista(){
 		
 	}
-	public Artista(String nombre, int añoNacimiento) {
+	public Artista(String nombr, int añoNacimient) {
 	
-		this.nombre = nombre;
-		this.añoNacimiento = añoNacimiento;
+		nombre = nombr;
+		añoNacimiento = añoNacimient;
 	}
 	
-	public String getNombre() {
+	public static String getNombre() {
 		
 		return nombre;
 	}
 	
-	public void setNombre(String nombre) {
+	public static void setNombre(String nombr) {
 		
-		this.nombre = nombre;
+		nombre = nombr;
 	}
 	
-	public int getAñoNacimiento() {
+	public static int getAñoNacimiento() {
 		
 		return añoNacimiento;
 	}
 
-	public void setAñoNacimiento(int añoNacimiento) {
+	public static void setAñoNacimiento(int añoNacimient) {
 		
-		this.añoNacimiento = añoNacimiento;
+		añoNacimiento = añoNacimient;
 	}
 	
 }

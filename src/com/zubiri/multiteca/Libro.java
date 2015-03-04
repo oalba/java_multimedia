@@ -7,7 +7,7 @@ public class Libro extends Obra{
 	private String editorial;
 	private int numPaginas;
 
-	Artista artista = new Artista();
+	//Artista artista = new Artista();
 	
 	public Libro(String titulo, Artista autor, int añoEdicion, String editorial, int numPaginas) {
 		super(titulo, autor, añoEdicion);
@@ -26,8 +26,8 @@ public class Libro extends Obra{
 		FileWriter fw = new FileWriter("/home/zubiri/AriketakJava/java_multimedia/src/com/zubiri/multiteca/obras.txt", true);
         fw.write("2," 
         	+ getTitulo() + "," 
-        	+ artista.getNombre() + "," 
-        	+ artista.getAñoNacimiento() + "," 
+        	+ Artista.getNombre() + "," 
+        	+ Artista.getAñoNacimiento() + "," 
         	+ getAñoEdicion() + "," 
         	+ this.getEditorial() + "," 
         	+ this.getNumPaginas() + "\n");

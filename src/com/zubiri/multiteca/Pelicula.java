@@ -24,8 +24,8 @@ public class Pelicula extends Obra{
 		FileWriter fw = new FileWriter("/home/zubiri/AriketakJava/java_multimedia/src/com/zubiri/multiteca/obras.txt", true);
         fw.write("3," 
         	+ getTitulo() + "," 
-        	+ artista.getNombre() + "," 
-        	+ artista.getAñoNacimiento() + "," 
+        	+ Artista.getNombre() + "," 
+        	+ Artista.getAñoNacimiento() + "," 
         	+ getAñoEdicion() + "," 
            	+ this.getProductora() + "\n");
         fw.close(); 
