@@ -2,6 +2,7 @@ package com.zubiri.multiteca;
 
 //import java.util.ArrayList;
 import java.util.*;
+import java.io.*;
 
 public class Pelicula extends Obra{
 
@@ -19,6 +20,18 @@ public class Pelicula extends Obra{
 		//Añade el resto de datos
 		System.out.println("Productora: ");
 		this.setProductora(sc.next());
+		try {
+		FileWriter fw = new FileWriter("/home/zubiri/AriketakJava/java_multimedia/src/com/zubiri/multiteca/obras.txt", true);
+        fw.write("3," 
+        	+ getTitulo() + "," 
+        	+ artista.getNombre() + "," 
+        	+ artista.getAñoNacimiento() + "," 
+        	+ getAñoEdicion() + "," 
+           	+ this.getProductora() + "\n");
+        fw.close(); 
+		}catch(IOException e){
+            System.out.println("Error E/S: "+e);
+        }
 	}
 		
 	public String getProductora() {

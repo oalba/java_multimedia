@@ -8,6 +8,10 @@ public abstract class Obra {
 	private Artista autor;
 	private int añoEdicion;
 	Artista artista = new Artista();
+
+	//public Obra(){
+
+	//}
 	
 	public Obra(String titulo, Artista autor, int añoEdicion) {
 	

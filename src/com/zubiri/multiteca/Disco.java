@@ -1,11 +1,15 @@
 package com.zubiri.multiteca;
 
 import java.util.*;
+import java.io.*;
 
 public class Disco extends Obra{
 	
 	private String discografia;
 	private int nCanciones;
+
+	//Obra obra = new Obra();
+	Artista artista = new Artista();
 	
 	public Disco(String titulo, Artista autor, int añoEdicion, String discografia, int nCanciones) {
 		super(titulo, autor, añoEdicion);
@@ -19,6 +23,20 @@ public class Disco extends Obra{
 		this.setDiscografia(sc.next());
 		System.out.println("Número de canciones del disco: ");
 		this.setnCanciones(sc.nextInt());
+		try {
+		//Artista artista = new Artista();
+		FileWriter fw = new FileWriter("/home/zubiri/AriketakJava/java_multimedia/src/com/zubiri/multiteca/obras.txt", true);
+        fw.write("1," 
+        	+ getTitulo() + "," 
+        	+ artista.getNombre() + "," 
+        	+ artista.getAñoNacimiento() + "," 
+        	+ getAñoEdicion() + "," 
+        	+ this.getDiscografia() + "," 
+        	+ this.getnCanciones() + "\n");
+        fw.close(); 
+		}catch(IOException e){
+            System.out.println("Error E/S: "+e);
+        }
 	}
 	
 	public String getDiscografia() {
