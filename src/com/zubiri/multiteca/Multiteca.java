@@ -56,7 +56,7 @@ public final class Multiteca {
 		}
 		for (int i = 0;i < multiteca.size();i++) {
 			Obra obra = multiteca.get(i);
-			obra.mostrarObra(); //dispatching din�mico a partir de polimorfismo
+			obra.mostrarObra(); //dispatching dinámico a partir de polimorfismo
 		}
 	}
 
